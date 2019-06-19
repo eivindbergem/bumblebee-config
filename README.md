@@ -11,6 +11,7 @@ other may get it working without having spend hours reading through issues on th
   - **Integrated**: Intel UHD Graphics 630 (Coffeelake 3x8 GT2)
   - **Discrete**: Nvidia GeForce GTX 1050 Ti Mobile
 - **Distro**: Ubuntu 18.10
+- **Nvidia driver**: `nvidia-driver-390` (from Ubuntu restricted repository)
 
 ## Configuration
 
