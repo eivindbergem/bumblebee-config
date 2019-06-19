@@ -27,12 +27,15 @@ Added
 ```
 __GLVND_DISALLOW_PATCHING=1
 ```
-to `/etc/environment`
-
-Source: https://askubuntu.com/questions/1029169/bumblebee-doesnt-work-on-ubuntu-18-04
+to `/etc/environment`.
 
 ## Prime
 
 Don't use `prime-select` as it interferes with how bumblebee works. When using the 
 intel profile it adds `alias nvidia off` in `/lib/modprobe.d/blacklist-nvidia.conf`, preventing 
 bumblebee to load the nvidia driver.
+
+## Sources:
+
+- https://github.com/Bumblebee-Project/Bumblebee/issues/920
+- https://askubuntu.com/questions/1029169/bumblebee-doesnt-work-on-ubuntu-18-04
