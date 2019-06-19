@@ -12,12 +12,24 @@ other may get it working without having spend hours reading through issues on th
   - **Discrete**: Nvidia GeForce GTX 1050 Ti Mobile
 - **Distro**: Ubuntu 18.10
 
-## Configuration changes
+## Configuration
 
-The changes made to the configuration are the following:
+To get it to work I had to modify the bumblebee configuration and do something to do with GLVND (not exactly sure what this does, but it works).
+
+### Bumblebee
 
 - Updated `LibraryPath` and 'XorgModulePath` to correct paths under `driver-nvidia` in `bumblebee.conf`.
 - Added screen section in `xorg.conf.nvidia`.
+
+### GLVND
+
+Added
+```
+__GLVND_DISALLOW_PATCHING=1
+```
+to `/etc/environment`
+
+Source: https://askubuntu.com/questions/1029169/bumblebee-doesnt-work-on-ubuntu-18-04
 
 ## Prime
 
