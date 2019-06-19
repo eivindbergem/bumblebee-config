@@ -35,6 +35,16 @@ Don't use `prime-select` as it interferes with how bumblebee works. When using t
 intel profile it adds `alias nvidia off` in `/lib/modprobe.d/blacklist-nvidia.conf`, preventing 
 bumblebee to load the nvidia driver.
 
+I have the following `/etc/modprobe.d/blacklist-nvidia.conf`:
+```
+blacklist nvidia
+blacklist nvidia_drm
+blacklist nvidia_modeset
+
+alias nvidia-drm off
+alias nvidia-modeset off
+```
+
 ## Sources:
 
 - https://github.com/Bumblebee-Project/Bumblebee/issues/920
